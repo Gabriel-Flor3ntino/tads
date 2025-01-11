@@ -1,3 +1,7 @@
+#ifndef FLOAT_VECTOR_H
+#define FLOAT_VECOR_H
+
+#include "dummy.h"
 /************** INTERFACE PÚBLICA *****************/
 typedef struct float_vector FloatVector;
 
@@ -8,6 +12,12 @@ int FloatVector_capacity(const FloatVector *vec);
 float FloatVector_at(const FloatVector *vec, int index);
 float FloatVector_get(const FloatVector *vec, int index);
 void FloatVector_append(FloatVector *vec, float val);
-void FloatVector_remove(FloatVector *vec, int index);
 void FloatVector_set(FloatVector *vec, int index, float val);
 void FloatVector_print(const FloatVector *vec);
+/*********************************************************/
+
+
+
+
+
+#endif

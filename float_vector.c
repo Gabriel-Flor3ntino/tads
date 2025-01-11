@@ -13,7 +13,7 @@ struct float_vector
 
 // função "privada" ==> não está disponível para os usuários/progrmas,
 // ou outros arquivos que usam o float_vector.h
-bool FloatVector_isFull(const FloatVector *vec){
+bool _FloatVector_isFull(const FloatVector *vec){
     return vec->size == vec->capacity;
 }
 
@@ -74,7 +74,7 @@ float FloatVector_get(const FloatVector *vec, int index) {
 
 
 void FloatVector_append(FloatVector *vec, float val){
-    if (isFull(vec)) {
+    if (_FloatVector_isFull(vec)) {
         fprintf(stderr, "ERROR in 'append'\n");
         fprintf(stderr, "Vector is full\n");
         exit(EXIT_FAILURE);
